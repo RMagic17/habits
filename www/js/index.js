@@ -39,7 +39,7 @@ var app = {
 
 function showSplashScreen(){
 
-  setTimeout(function(){  InitApp();   }, 2000);
+  setTimeout(function(){ InitApp();  }, 1000);
 
 }
 
@@ -47,10 +47,10 @@ function showSplashScreen(){
 function InitApp(){
 
    if(localStorage.getItem("habits-login")=="autenticado"){
-       mainView.router.navigate('/login/',{animate:true});   
+       mainView.router.navigate('/medicion/',{animate:true});   
    }else{
-    mainView.router.navigate('/frase/',{animate:true});
-   }
+    mainView.router.navigate('/medicion/',{animate:true});
+   } 
 
 }
 
@@ -116,6 +116,34 @@ var app7 = new Framework7({
         path: '/frase/',
         url: 'views/frase.html',
       },
+      {
+        path: '/habito/',
+        url: 'views/habito.html',
+      },
+      {
+        path: '/habito1/',
+        url: 'views/habito1.html',
+      },
+      {
+        path: '/habito2/',
+        url: 'views/habito2.html',
+      },
+      {
+        path: '/planes/',
+        url: 'views/planes.html',
+      },
+      {
+        path: '/medicion/',
+        url: 'views/medicion.html',
+      },
+      {
+        path: '/logros/',
+        url: 'views/logros.html',
+      },
+      {
+        path: '/estadistica/',
+        url: 'views/estadistica.html',
+      },
 
     ],
     // ... other parameters
@@ -138,6 +166,76 @@ var notificationFull = app7.notification.create({
     text: 'This is a simple notification message',
 
   });
+  
+
+ $$(document).on('page:init','.page[data-name="medicion"]', function (e) {
+
+  
+     
+       var calendarRange = app7.calendar.create({
+      inputEl: '#demo-calendar-range',
+      rangePicker: true
+
+    
+
+ }); 
+
+ var pickerDevice = app7.picker.create({
+  inputEl: '#demo-picker-device',
+  cols: [
+    {
+      values: ['Alta', 'Normal', 'Baja',]
+    }
+  ]
+}); 
+}); 
+
+
+$$(document).on('page:init','.page[data-name="logros"]', function (e) {
+
+
+});
+
+
+$$(document).on('page:init','.page[data-name="estadistica"]', function (e) {
+
+  var $$ = Dom7;
+ var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August' , 'September' , 'October', 'November', 'December'];
+ var calendarInline = app7.calendar.create({
+  containerEl: '#demo-calendar-inline-container',
+  value: [new Date()],
+  weekHeader: false,
+  renderToolbar: function () {
+    return '<div class="toolbar calendar-custom-toolbar no-shadow">' +
+      '<div class="toolbar-inner">' +
+        '<div class="left">' +
+          '<a href="#" class="link icon-only"><i class="icon icon-back ' + (app.theme === 'md' ? 'color-black' : '') + '"></i></a>' +
+        '</div>' +
+        '<div class="center"></div>' +
+        '<div class="right">' +
+          '<a href="#" class="link icon-only"><i class="icon icon-forward ' + (app.theme === 'md' ? 'color-black' : '') + '"></i></a>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  },
+  on: {
+    init: function (c) {
+      $$('.calendar-custom-toolbar .center').text(monthNames[c.currentMonth] +', ' + c.currentYear);
+      $$('.calendar-custom-toolbar .left .link').on('click', function () {
+        calendarInline.prevMonth();
+      });
+      $$('.calendar-custom-toolbar .right .link').on('click', function () {
+        calendarInline.nextMonth();
+      });
+    },
+    monthYearChangeStart: function (c) {
+      $$('.calendar-custom-toolbar .center').text(monthNames[c.currentMonth] +', ' + c.currentYear);
+    }
+  }
+});
+
+});
+
 
 
 
@@ -224,6 +322,10 @@ var notificationFull = app7.notification.create({
   
   }
 
+  
+
+
+  
 
  
 
@@ -244,12 +346,10 @@ var notificationFull = app7.notification.create({
       console.log("ehh funciona!!");
   }
 
- 
-
   function Cerrarsesion(){
 
-  localStorage.setItem("habits-login", "false");
-
-  mainView.router.navigate('/login/',{animate:true});
-
-  } ;
+    localStorage.setItem("habits-login", "false");
+  
+    mainView.router.navigate('/login/',{animate:true});
+  
+    };

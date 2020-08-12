@@ -23,6 +23,8 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="format detection" content="telephone-no" />
+    <meta name="msapplication tap highlight" content="no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Color theme for statusbar (Android only) -->
@@ -45,16 +47,18 @@
       <!-- Initial Page, "data-name" contains page name -->
       <div data-name="home" class="page">
 
-
+        <html class="theme-dark">
        
 
         <!-- Scrollable page content -->
         <div class="page-content bg-dark">
 
-           <img class="splashcenter" src="img/splash.png" style="padding-left: 33%;
-           padding-top: 10%;"/>
-
-
+          <div class="row images">
+  
+            <div class="col">
+           <img class="splashcenter" src="img/splash.png"/>
+            </div>
+           </div>
            
           </div>
         </div>
