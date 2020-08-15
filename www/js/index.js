@@ -46,13 +46,15 @@ var app = {
          
           
 
-          getToken(data.registrationId,device.platform);
+          //getToken(data.registrationId,device.platform);
           
           token = data.registrationId;
           console.log(data.registrationId);
           console.log(data.registrationType);
       
-          });
+          alert(data.registrationId);
+          }); 
+           
 
 
           push.on('notification', function (data) {

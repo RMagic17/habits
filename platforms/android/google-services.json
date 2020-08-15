@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "481230250075",
-    "firebase_url": "https://mensajes-5fe32.firebaseio.com",
-    "project_id": "mensajes-5fe32",
-    "storage_bucket": "mensajes-5fe32.appspot.com"
+    "project_number": "495954214507",
+    "firebase_url": "https://habits-65054.firebaseio.com",
+    "project_id": "habits-65054",
+    "storage_bucket": "habits-65054.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:481230250075:android:904930cfe56d85b0445f7e",
+        "mobilesdk_app_id": "1:495954214507:android:1a43a777c7543570073b2e",
         "android_client_info": {
-          "package_name": "com.mensajes.robert"
+          "package_name": "com.habits.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "481230250075-paldr58iad7r45vpe20qp8upr4vt98tc.apps.googleusercontent.com",
+          "client_id": "495954214507-q2p9kla8bkdd3gcig8aap60u2afgddrv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDZNPhm00r3FZ5SsyyFGIZi9N5XB4ffLIQ"
+          "current_key": "AIzaSyBXEM-Br1Rhuudzkue6CSfe-J8fqr9P0mI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "481230250075-paldr58iad7r45vpe20qp8upr4vt98tc.apps.googleusercontent.com",
+              "client_id": "495954214507-q2p9kla8bkdd3gcig8aap60u2afgddrv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
