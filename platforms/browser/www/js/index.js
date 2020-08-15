@@ -81,7 +81,7 @@ var app = {
 
 
           app7.request({
-            url: 'http://eleadex.online/team/api/settoken.php',
+            url: 'http://habits.com/habits/api/settoken.php',
             data:{token:token,platform:platform},
             method:'POST',
             crossDomain: true,
