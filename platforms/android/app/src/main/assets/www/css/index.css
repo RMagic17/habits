@@ -223,6 +223,7 @@ h1 {
      }
 
      .center-image{
+         image-resolution: 100%;
         position: absolute;
           margin: auto;
           top: 0;
