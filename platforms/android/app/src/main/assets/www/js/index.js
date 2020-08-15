@@ -47,9 +47,9 @@ function showSplashScreen(){
 function InitApp(){
 
    if(localStorage.getItem("habits-login")=="autenticado"){
-       mainView.router.navigate('/medicion/',{animate:true});   
+       mainView.router.navigate('/frase/',{animate:true});   
    }else{
-    mainView.router.navigate('/medicion/',{animate:true});
+    mainView.router.navigate('/frase/',{animate:true});
    } 
 
 }
